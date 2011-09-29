@@ -44,3 +44,12 @@ To use in your `pom.xml`:
   <!-- ... -->
 </project>
 ```
+
+## Caveats ##
+
+`SimpleJSONSerializer` will only *de*serialise JSON objects, arrays, or `null`;
+it will not accept top-level strings or numbers (although of course strings and
+numbers *inside* arrays or objects are fine).
+
+The behaviour on invalid JSON or top-level strings or numbers is currently to
+throw an exception, which is not very friendly.
