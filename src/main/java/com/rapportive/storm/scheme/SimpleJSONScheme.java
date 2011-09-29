@@ -33,13 +33,13 @@ public class SimpleJSONScheme implements Scheme {
         try {
             chars = new String(bytes, encoding);
         } catch (UnsupportedEncodingException e) {
-            throw new RuntimeException(e);
+            throw new IllegalStateException(e);
         }
         final Object json;
         try {
             json = JSONValue.parseWithException(chars);
         } catch (ParseException e) {
-          throw new RuntimeException(e); // TODO this is a bit impolite
+          throw new IllegalArgumentException(e); // TODO this is a bit impolite
         }
         return Collections.singletonList(json);
     }

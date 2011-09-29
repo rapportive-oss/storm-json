@@ -45,7 +45,7 @@ public class SimpleJSONSerializer implements ISerialization<Object> {
         try {
             return JSONValue.parseWithException(reader);
         } catch (ParseException e) {
-            throw new RuntimeException(e); // TODO this is a bit impolite
+            throw new IllegalArgumentException(e); // TODO this is a bit impolite
         }
     }
 }
