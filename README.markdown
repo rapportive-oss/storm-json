@@ -4,12 +4,18 @@ storm-json provides JSON serialisation support for
 [Storm](https://github.com/nathanmarz/storm).  It currently provides two
 classes:
 
- * SimpleJSONScheme: an implementation of
+ * [SimpleJSONScheme](http://code.rapportive.com/storm-json/doc/com/rapportive/storm/scheme/SimpleJSONScheme.html):
+   an implementation of
    [`backtype.storm.spout.Scheme`](http://nathanmarz.github.com/storm/doc/backtype/storm/spout/Scheme.html)
    for writing spouts that consume from a source producing JSON.
- * SimpleJSONSerializer: an implementation of
+ * [SimpleJSONSerializer](http://code.rapportive.com/storm-json/doc/com/rapportive/storm/serializer/SimpleJSONSerializer.html):
+   an implementation of
    [`backtype.storm.serialization.ISerialization`](http://nathanmarz.github.com/storm/doc/backtype/storm/serialization/ISerialization.html)
    so that spouts and bolts can emit and receive tuples containing JSON values.
+
+## Documentation ##
+
+The Javadocs can be found at [http://code.rapportive.com/storm-json]().
 
 ## Usage ##
 
